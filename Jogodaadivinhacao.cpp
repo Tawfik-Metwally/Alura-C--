@@ -10,5 +10,22 @@ int main()
     cout << "*************************************" << endl;
 
     int numero_secreto = 32;
-    cout << "O numero secreto eh " << numero_secreto << " nao conte a ninguem" << endl;
+
+    int chute;
+    cout << "Qual seu chute? ";
+    cin >> chute;
+    cout << "O valor do seu chute eh " << chute << endl;
+
+    if (numero_secreto == chute)
+    {
+        cout << "Parabens! Voce acertou o numero secreto!" << endl;
+    }
+    else if (numero_secreto < chute)
+    {
+        cout << "Seu chute foi maior que o numero secreto!" << endl;
+    }
+    else
+    {
+        cout << "Seu chute foi menor que o numero secreto!" << endl;
+    }
 }
