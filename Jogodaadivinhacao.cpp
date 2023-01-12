@@ -43,7 +43,10 @@ int main()
             cout << "Seu chute foi menor que o numero secreto!" << endl;
         }
     }
+
     cout << "Fim de Jogo!" << endl;
     cout << "Voce acertou em " << tentativas << " tentativas." << endl;
+    cout << fixed;
+    cout.precision(2);
     cout << "Sua pontuacao foi de " << pontos << " pontos." << endl;
 }
