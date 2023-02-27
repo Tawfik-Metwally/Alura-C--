@@ -1,0 +1,21 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Conhecendo a linguagem e a STL/.vs
+/Conhecendo a linguagem e a STL/Jogo da Adivinhacao/.vs/Jogo da Adivinhacao/FileContentIndex
+/Conhecendo a linguagem e a STL/Jogo da Adivinhacao/.vs/Jogo da Adivinhacao/v17
+/Conhecendo a linguagem e a STL/Jogo da Forca/.vs/VSWorkspaceState.json
+/Conhecendo a linguagem e a STL/Jogo da Forca/.vs/slnx.sqlite
+/Conhecendo a linguagem e a STL/Jogo da Forca/.vs/ProjectSettings.json
+/Conhecendo a linguagem e a STL/Jogo da Forca/.vs/Jogo da Forca/v17/Browse.VC.db
+/Conhecendo a linguagem e a STL/Jogo da Forca/.vs/Jogo da Forca/v17/.wsuo
+/Conhecendo a linguagem e a STL/Jogo da Forca/.vs/Jogo da Forca/FileContentIndex/read.lock
+/Conhecendo a linguagem e a STL/Jogo da Forca/.vs/Jogo da Forca/FileContentIndex/9d50ddb5-09bf-46d0-b1b1-2b2ae1343d5d.vsidx
+/Conhecendo a linguagem e a STL/Jogo da Forca/.vs/Jogo da Forca/FileContentIndex/8cd04f40-bb95-426e-96c1-3a99aad2a9f4.vsidx
+/Conhecendo a linguagem e a STL/Jogo da Forca/.vs/Jogo da Forca/FileContentIndex/4f028b2a-35ea-4fcd-8554-698006dd765c.vsidx
+/Conhecendo a linguagem e a STL/Jogo da Adivinhacao/.vs/VSWorkspaceState.json
+/Conhecendo a linguagem e a STL/Jogo da Adivinhacao/.vs/slnx.sqlite
+/Conhecendo a linguagem e a STL/Jogo da Adivinhacao/.vs/ProjectSettings.json
+/.gitignore
