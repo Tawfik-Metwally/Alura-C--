@@ -13,7 +13,7 @@ bool letra_existe(char chute) {
 	}*/ //Forma antiga
 
 	//Forma nova do C++11 (g++ Jogodaforca.cpp -o Jogodaforca.exe -std=c++11)
-	//Tem como encurtar com "makefile", mas n consegui
+	//Com makefile (mingw32-make Jogodaforca)
 	for (char letra : PALAVRA_SECRETA) {
 		if (chute == letra) {
 			return true;
