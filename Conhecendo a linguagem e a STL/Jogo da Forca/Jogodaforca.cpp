@@ -39,29 +39,64 @@ bool nao_enforcou() {
 	return chutes_errados.size() < 5;
 }
 
-int main() {
-	//cout << PALAVRA_SECRETA << endl;
-
+void cabecalho() {
 	cout << "*********************" << endl;
 	cout << "*** Jogo da Forca ***" << endl;
 	cout << "*********************" << endl;
+}
+
+void cont_erros() {
+	cout << "Chutes errados: ";
+	for (char letra : chutes_errados)
+	{
+		cout << letra << " ";
+	}
+	cout << endl;
+}
+
+void campo_secreto() {
+	for (char letra : PALAVRA_SECRETA)
+	{
+		if (chutou[letra])
+			cout << letra << " ";
+		else
+			cout << "_ ";
+	}
+	cout << endl;
+}
+
+void verifica_chute(char chute) {
+	if (letra_existe(chute))
+	{
+		cout << "Parabens! Seu chute esta certo!" << endl;
+	}
+	else {
+		cout << "Voce errou! Tente novamente!" << endl;
+		chutes_errados.push_back(chute);
+	}
+}
+
+void resultado() {
+	if (!nao_acertou())
+		cout << "Parabens! Voce acertou a palavra!" << endl;
+	else
+		cout << "Infelizmente voce errou a palavra! Tente novamente!" << endl;
+	cout << "A palavra era " << PALAVRA_SECRETA << endl;
+	cout << "Fim de Jogo!" << endl;
+}
+
+int main() {
+	//cout << PALAVRA_SECRETA << endl;
+
+	cabecalho();
 
 	while (nao_acertou() && nao_enforcou()) {
 
-		cout << "Chutes errados: ";
-		for (char letra : chutes_errados)
-		{
-			cout << letra << " ";
-		}
-		cout << endl;
-		for (char letra : PALAVRA_SECRETA)
-		{
-			if (chutou[letra])
-				cout << letra << " ";
-			else
-				cout << "_ ";
-		}
-		cout << endl;
+		cont_erros();
+
+		campo_secreto();
+
+		cout << "Escreva seu chute: ";
 		char chute;
 		cin >> chute;
 
@@ -69,20 +104,9 @@ int main() {
 
 		//cout << "Seu chute foi " << chute << endl;
 
-		if (letra_existe(chute))
-		{
-			cout << "Parabens! Seu chute esta certo!" << endl;
-		}
-		else {
-			cout << "Voce errou! Tente novamente!" << endl;
-			chutes_errados.push_back(chute);
-		}
+		verifica_chute(chute);
+
 		cout << endl;
 	}
-	if (!nao_acertou())
-		cout << "Parabens! Voce acertou a palavra!" << endl;
-	else
-		cout << "Infelizmente voce errou a palavra! Tente novamente!" << endl;
-	cout << "A palavra era " << PALAVRA_SECRETA << endl;
-	cout << "Fim de Jogo!" << endl;
+	resultado();
 }
