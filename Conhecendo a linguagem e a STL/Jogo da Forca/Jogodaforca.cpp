@@ -9,15 +9,6 @@ map <char, bool> chutou;
 vector <char> chutes_errados;
 
 bool letra_existe(char chute) {
-	/*for (int i = 0; i < PALAVRA_SECRETA.size(); i++)
-	{
-		if (chute == PALAVRA_SECRETA[i]) {
-			return true;
-		}
-	}*/ //Forma antiga
-
-	//Forma nova do C++11 (g++ Jogodaforca.cpp -o Jogodaforca.exe -std=c++11)
-	//Com makefile (mingw32-make Jogodaforca)
 	for (char letra : PALAVRA_SECRETA) {
 		if (chute == letra)
 			return true;
@@ -67,9 +58,7 @@ void campo_secreto() {
 
 void verifica_chute(char chute) {
 	if (letra_existe(chute))
-	{
 		cout << "Parabens! Seu chute esta certo!" << endl;
-	}
 	else {
 		cout << "Voce errou! Tente novamente!" << endl;
 		chutes_errados.push_back(chute);
@@ -86,7 +75,6 @@ void resultado() {
 }
 
 int main() {
-	//cout << PALAVRA_SECRETA << endl;
 
 	cabecalho();
 
@@ -99,10 +87,7 @@ int main() {
 		cout << "Escreva seu chute: ";
 		char chute;
 		cin >> chute;
-
 		chutou[chute] = true;
-
-		//cout << "Seu chute foi " << chute << endl;
 
 		verifica_chute(chute);
 
