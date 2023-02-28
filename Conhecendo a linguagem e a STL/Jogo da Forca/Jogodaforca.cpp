@@ -25,16 +25,28 @@ bool letra_existe(char chute) {
 	return false;
 }
 
+bool nao_acertou() {
+	for (char letra : PALAVRA_SECRETA)
+	{
+		if (!chutou[letra]) {
+			return true;
+		}
+	}
+	return false;
+}
+
+bool nao_enforcou() {
+	return chutes_errados.size() < 5;
+}
+
 int main() {
 	//cout << PALAVRA_SECRETA << endl;
-
-	bool nao_acertou = true;
-	bool nao_enforcou = true;
 
 	cout << "*********************" << endl;
 	cout << "*** Jogo da Forca ***" << endl;
 	cout << "*********************" << endl;
-	while (nao_acertou && nao_enforcou) {
+
+	while (nao_acertou() && nao_enforcou()) {
 
 		cout << "Chutes errados: ";
 		for (char letra : chutes_errados)
@@ -67,4 +79,10 @@ int main() {
 		}
 		cout << endl;
 	}
+	if (!nao_acertou())
+		cout << "Parabens! Voce acertou a palavra!" << endl;
+	else
+		cout << "Infelizmente voce errou a palavra! Tente novamente!" << endl;
+	cout << "A palavra era " << PALAVRA_SECRETA << endl;
+	cout << "Fim de Jogo!" << endl;
 }
