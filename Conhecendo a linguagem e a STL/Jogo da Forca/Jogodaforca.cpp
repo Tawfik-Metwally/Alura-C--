@@ -1,6 +1,7 @@
 #include <iostream>
 #include <map>
-#include<vector>
+#include <vector>
+#include <fstream>
 #include <string>
 using namespace std;
 
@@ -74,9 +75,27 @@ void resultado() {
 	cout << "Fim de Jogo!" << endl;
 }
 
+void le_arquivo() {
+	ifstream arquivo;
+	arquivo.open("Palavras.txt");
+
+	int quantidade_palavras;
+	arquivo >> quantidade_palavras;
+	cout << "O arquivo tem " << quantidade_palavras << " palavras" << endl;
+
+	for (int i = 0; i < quantidade_palavras; i++)
+	{
+		string palavra_lida;
+		arquivo >> palavra_lida;
+		cout << "No " << i << " : " << palavra_lida << endl;
+	}
+}
+
 int main() {
 
 	cabecalho();
+
+	le_arquivo();
 
 	while (nao_acertou() && nao_enforcou()) {
 
