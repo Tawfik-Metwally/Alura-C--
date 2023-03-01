@@ -2,15 +2,17 @@
 #include <map>
 #include <vector>
 #include <fstream>
+#include <ctime>
+#include <cstdlib>
 #include <string>
 using namespace std;
 
-const string PALAVRA_SECRETA = "MELANCIA";
+string palavra_secreta = "MELANCIA";
 map <char, bool> chutou;
 vector <char> chutes_errados;
 
 bool letra_existe(char chute) {
-	for (char letra : PALAVRA_SECRETA) {
+	for (char letra : palavra_secreta) {
 		if (chute == letra)
 			return true;
 	}
@@ -18,7 +20,7 @@ bool letra_existe(char chute) {
 }
 
 bool nao_acertou() {
-	for (char letra : PALAVRA_SECRETA)
+	for (char letra : palavra_secreta)
 	{
 		if (!chutou[letra]) {
 			return true;
@@ -47,7 +49,7 @@ void cont_erros() {
 }
 
 void campo_secreto() {
-	for (char letra : PALAVRA_SECRETA)
+	for (char letra : palavra_secreta)
 	{
 		if (chutou[letra])
 			cout << letra << " ";
@@ -71,31 +73,40 @@ void resultado() {
 		cout << "Parabens! Voce acertou a palavra!" << endl;
 	else
 		cout << "Infelizmente voce errou a palavra! Tente novamente!" << endl;
-	cout << "A palavra era " << PALAVRA_SECRETA << endl;
+	cout << "A palavra era " << palavra_secreta << endl;
 	cout << "Fim de Jogo!" << endl;
 }
 
-void le_arquivo() {
+vector<string> le_arquivo() {
 	ifstream arquivo;
 	arquivo.open("Palavras.txt");
 
 	int quantidade_palavras;
 	arquivo >> quantidade_palavras;
-	cout << "O arquivo tem " << quantidade_palavras << " palavras" << endl;
+
+	vector <string> palavras_do_arquivo;
 
 	for (int i = 0; i < quantidade_palavras; i++)
 	{
 		string palavra_lida;
 		arquivo >> palavra_lida;
-		cout << "No " << i << " : " << palavra_lida << endl;
+		palavras_do_arquivo.push_back(palavra_lida);
 	}
+	return palavras_do_arquivo;
+}
+
+void palavra_escolhida() {
+	vector<string> palavras = le_arquivo();
+	srand(time(NULL));
+	int indice_sorteado = rand() % palavras.size();
+	palavra_secreta = palavras[indice_sorteado];
 }
 
 int main() {
 
 	cabecalho();
 
-	le_arquivo();
+	palavra_escolhida();
 
 	while (nao_acertou() && nao_enforcou()) {
 
