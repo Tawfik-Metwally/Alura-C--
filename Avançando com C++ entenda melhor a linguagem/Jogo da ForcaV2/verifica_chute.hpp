@@ -1,0 +1,1 @@
+void verifica_chute(char chute);
