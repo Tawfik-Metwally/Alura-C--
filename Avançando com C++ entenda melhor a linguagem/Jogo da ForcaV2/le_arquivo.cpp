@@ -1,11 +1,11 @@
-#include "le_arquivo.hpp"
-#include <fstream>
 #include <iostream>
+#include <fstream>
+#include "le_arquivo.hpp"
 
 std::vector<std::string> le_arquivo() {
 	std::ifstream arquivo;
-	arquivo.open("Palavras.txt");
 
+	arquivo.open("Palavras.txt");
 	if (arquivo.is_open()) {
 
 		int quantidade_palavras;

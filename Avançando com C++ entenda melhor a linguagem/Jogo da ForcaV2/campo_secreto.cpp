@@ -4,6 +4,7 @@
 
 extern std::string palavra_secreta;
 extern std::map <char, bool> chutou;
+
 void campo_secreto() {
 	for (char letra : palavra_secreta)
 	{

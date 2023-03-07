@@ -1,5 +1,5 @@
-#include <vector>
 #include <string>
+#include <vector>
 #include <ctime>
 #include "le_arquivo.hpp"
 

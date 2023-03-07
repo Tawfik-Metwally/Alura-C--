@@ -1,7 +1,10 @@
-#include "adiciona_palavra.hpp"
 #include <iostream>
+#include <string>
+#include "adiciona_palavra.hpp"
+#include "nao_acertou.hpp"
 
 extern std::string palavra_secreta;
+
 void resultado() {
 	std::cout << "A palavra era " << palavra_secreta << std::endl;
 

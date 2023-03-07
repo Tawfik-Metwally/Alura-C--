@@ -7,7 +7,6 @@
 #include <string>
 #include "cabecalho.hpp"
 #include "palavra_escolhida.hpp"
-#include "le_arquivo.hpp"
 #include "nao_acertou.hpp"
 #include "nao_enforcou.hpp"
 #include "cont_erros.hpp"

@@ -1,8 +1,8 @@
-#include "le_arquivo.hpp"
-#include "salva_arquivo.hpp"
+#include <iostream>
 #include <string>
 #include <vector>
-#include <iostream>
+#include "le_arquivo.hpp"
+#include "salva_arquivo.hpp"
 
 void adiciona_palavra() {
 	std::cout << "Digite uma palavra tudo maiusculo: " << std::endl;

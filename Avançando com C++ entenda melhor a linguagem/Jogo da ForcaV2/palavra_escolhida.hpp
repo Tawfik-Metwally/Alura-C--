@@ -1,1 +1,1 @@
-void palavra_escolhida()
+void palavra_escolhida();
