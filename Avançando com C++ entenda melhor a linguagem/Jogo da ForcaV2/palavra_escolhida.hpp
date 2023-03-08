@@ -1,1 +1,0 @@
-void palavra_escolhida();
