@@ -3,7 +3,7 @@
 #include "adiciona_palavra.hpp"
 #include "nao_acertou.hpp"
 
-void resultado(std::string palavra_secreta, std::map <char, bool>& chutou) {
+void resultado(const std::string palavra_secreta, const std::map <char, bool>& chutou) {
 	std::cout << "A palavra era " << palavra_secreta << std::endl;
 
 	if (!nao_acertou(palavra_secreta, chutou)) {

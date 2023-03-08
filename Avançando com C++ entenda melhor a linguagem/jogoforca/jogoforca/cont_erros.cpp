@@ -1,7 +1,7 @@
 #include <iostream>
 #include "cont_erros.hpp"
 
-void cont_erros(std::vector <char>& chutes_errados) {
+void cont_erros(const std::vector <char>& chutes_errados) {
 	std::cout << "Chutes errados: ";
 	for (char letra : chutes_errados)
 	{
