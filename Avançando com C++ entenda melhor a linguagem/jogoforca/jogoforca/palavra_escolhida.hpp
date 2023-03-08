@@ -1,1 +1,2 @@
-void palavra_escolhida();
+#include <string>
+std::string palavra_escolhida();

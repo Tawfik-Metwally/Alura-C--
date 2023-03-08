@@ -1,13 +1,6 @@
-#include <iostream>
-#include <map>
-#include <vector>
-#include <fstream>
-#include <cstdlib>
-#include <string>
 #include "cabecalho.hpp"
 #include "palavra_escolhida.hpp"
 #include "nao_acertou.hpp"
-#include "nao_enforcou.hpp"
 #include "cont_erros.hpp"
 #include "campo_secreto.hpp"
 #include "verifica_chute.hpp"
@@ -24,22 +17,22 @@ int main() {
 
 	cabecalho();
 
-	palavra_escolhida();
+	palavra_secreta = palavra_escolhida();
 
-	while (nao_acertou() && nao_enforcou()) {
+	while (nao_acertou(palavra_secreta, &chutou) && chutes_errados.size() < 5) {
 
-		cont_erros();
+		cont_erros(&chutes_errados);
 
-		campo_secreto();
+		campo_secreto(palavra_secreta, &chutou);
 
 		cout << "Escreva seu chute: ";
 		char chute;
 		cin >> chute;
 		chutou[chute] = true;
 
-		verifica_chute(chute);
+		verifica_chute(chute, &chutes_errados, palavra_secreta);
 
 		cout << endl;
 	}
-	resultado();
+	resultado(palavra_secreta, &chutou);
 }

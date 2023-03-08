@@ -1,14 +1,12 @@
 #include <iostream>
-#include <string>
+#include "resultado.hpp"
 #include "adiciona_palavra.hpp"
 #include "nao_acertou.hpp"
 
-extern std::string palavra_secreta;
-
-void resultado() {
+void resultado(std::string palavra_secreta, std::map <char, bool>* chutou) {
 	std::cout << "A palavra era " << palavra_secreta << std::endl;
 
-	if (!nao_acertou()) {
+	if (!nao_acertou(palavra_secreta, chutou)) {
 		std::cout << "Parabens! Voce acertou a palavra!" << std::endl;
 		std::cout << "Deseja adicionar uma palavra(S/N)? ";
 		char opcao;

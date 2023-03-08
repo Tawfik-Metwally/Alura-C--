@@ -1,14 +1,10 @@
 #include <iostream>
-#include <string>
-#include <map>
+#include "campo_secreto.hpp"
 
-extern std::string palavra_secreta;
-extern std::map <char, bool> chutou;
-
-void campo_secreto() {
+void campo_secreto(std::string palavra_secreta, std::map <char, bool>* chutou) {
 	for (char letra : palavra_secreta)
 	{
-		if (chutou[letra])
+		if ((*chutou)[letra])
 			std::cout << letra << " ";
 		else
 			std::cout << "_ ";
