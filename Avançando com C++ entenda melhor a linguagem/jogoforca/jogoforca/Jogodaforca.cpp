@@ -19,20 +19,20 @@ int main() {
 
 	palavra_secreta = palavra_escolhida();
 
-	while (nao_acertou(palavra_secreta, &chutou) && chutes_errados.size() < 5) {
+	while (nao_acertou(palavra_secreta, chutou) && chutes_errados.size() < 5) {
 
-		cont_erros(&chutes_errados);
+		cont_erros(chutes_errados);
 
-		campo_secreto(palavra_secreta, &chutou);
+		campo_secreto(palavra_secreta, chutou);
 
 		cout << "Escreva seu chute: ";
 		char chute;
 		cin >> chute;
 		chutou[chute] = true;
 
-		verifica_chute(chute, &chutes_errados, palavra_secreta);
+		verifica_chute(chute, chutes_errados, palavra_secreta);
 
 		cout << endl;
 	}
-	resultado(palavra_secreta, &chutou);
+	resultado(palavra_secreta, chutou);
 }
