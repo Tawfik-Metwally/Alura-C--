@@ -7,6 +7,8 @@
 #include "resultado.hpp"
 
 using namespace std;
+//using namespace forca;
+//using namespace forca;
 
 static string palavra_secreta;
 static map <char, bool> chutou;
@@ -15,24 +17,24 @@ static vector <char> chutes_errados;
 
 int main() {
 
-	cabecalho();
+	forca::cabecalho();
 
-	palavra_secreta = palavra_escolhida();
+	palavra_secreta = forca::palavra_escolhida();
 
-	while (nao_acertou(palavra_secreta, chutou) && chutes_errados.size() < 5) {
+	while (forca::nao_acertou(palavra_secreta, chutou) && chutes_errados.size() < 5) {
 
-		cont_erros(chutes_errados);
+		forca::cont_erros(chutes_errados);
 
-		campo_secreto(palavra_secreta, chutou);
+		forca::campo_secreto(palavra_secreta, chutou);
 
 		cout << "Escreva seu chute: ";
 		char chute;
 		cin >> chute;
 		chutou[chute] = true;
 
-		verifica_chute(chute, chutes_errados, palavra_secreta);
+		forca::verifica_chute(chute, chutes_errados, palavra_secreta);
 
 		cout << endl;
 	}
-	resultado(palavra_secreta, chutou);
+	forca::resultado(palavra_secreta, chutou);
 }

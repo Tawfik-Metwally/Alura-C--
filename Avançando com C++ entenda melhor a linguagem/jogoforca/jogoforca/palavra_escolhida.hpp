@@ -1,2 +1,5 @@
 #include <string>
-std::string palavra_escolhida();
+
+namespace forca {
+	std::string palavra_escolhida();
+}
