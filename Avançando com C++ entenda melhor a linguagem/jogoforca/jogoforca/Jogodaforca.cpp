@@ -8,11 +8,12 @@
 
 using namespace std;
 //using namespace forca;
-//using namespace forca;
 
 static string palavra_secreta;
 static map <char, bool> chutou;
-static vector <char> chutes_errados;
+static array <char, 5> chutes_errados;
+static int i = 0;
+//static vector <char> chutes_errados;
 
 
 int main() {
@@ -21,7 +22,7 @@ int main() {
 
 	palavra_secreta = forca::palavra_escolhida();
 
-	while (forca::nao_acertou(palavra_secreta, chutou) && chutes_errados.size() < 5) {
+	while (forca::nao_acertou(palavra_secreta, chutou) && i < 5) {
 
 		forca::cont_erros(chutes_errados);
 
@@ -32,7 +33,7 @@ int main() {
 		cin >> chute;
 		chutou[chute] = true;
 
-		forca::verifica_chute(chute, chutes_errados, palavra_secreta);
+		forca::verifica_chute(chute, chutes_errados, palavra_secreta, i);
 
 		cout << endl;
 	}

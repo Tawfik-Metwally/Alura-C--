@@ -1,4 +1,4 @@
-#include <vector>
+#include <array>
 namespace forca {
-	void cont_erros(const std::vector <char>& chutes_errados);
+	void cont_erros(const std::array <char, 5>& chutes_errados);
 }

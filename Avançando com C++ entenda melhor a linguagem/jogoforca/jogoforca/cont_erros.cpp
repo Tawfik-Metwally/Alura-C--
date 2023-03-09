@@ -2,7 +2,7 @@
 #include "cont_erros.hpp"
 
 namespace forca {
-	void cont_erros(const std::vector <char>& chutes_errados) {
+	void cont_erros(const std::array <char, 5>& chutes_errados) {
 		std::cout << "Chutes errados: ";
 		for (char letra : chutes_errados)
 		{
