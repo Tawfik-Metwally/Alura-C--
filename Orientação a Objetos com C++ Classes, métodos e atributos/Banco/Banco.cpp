@@ -3,6 +3,10 @@
 
 using namespace std;
 
+void ExibeSaldo(const Conta& conta) {
+	cout << "Seu Saldo eh: " << conta.mostraSaldo() << endl;
+}
+
 int main() {
 	Conta UmaConta;
 	UmaConta.definirNomeTitular("Joao");
@@ -12,6 +16,7 @@ int main() {
 	OutraConta.depositar(500);
 	OutraConta.sacar(400);
 
-	cout << "UmaConta: " << UmaConta.mostraSaldo() << " OutraConta: " << OutraConta.mostraSaldo() << endl;
+	ExibeSaldo(OutraConta);
+	ExibeSaldo(UmaConta);
 	cout << "nome:" << UmaConta.mostraNome() << endl;
 }

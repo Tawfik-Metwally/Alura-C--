@@ -13,7 +13,7 @@ std::string Conta::mostraNome() {
 	return nome;
 }
 
-float Conta::mostraSaldo() {
+float Conta::mostraSaldo() const {
 	return saldo;
 }
 

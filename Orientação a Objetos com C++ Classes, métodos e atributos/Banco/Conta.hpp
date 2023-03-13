@@ -11,7 +11,7 @@ public:
 	std::string mostraNumero();
 	std::string mostraCpf();
 	std::string mostraNome();
-	float mostraSaldo();
+	float mostraSaldo() const;
 	void definirNumeroConta(std::string numeroConta);
 	void definirCpfTitular(std::string cpfTitular);
 	void definirNomeTitular(std::string nomeTitular);
