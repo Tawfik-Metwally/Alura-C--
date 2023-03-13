@@ -5,16 +5,13 @@ using namespace std;
 
 int main() {
 	Conta UmaConta;
-	UmaConta.numero = "123456";
-	UmaConta.cpf = "123.456.789-10";
-	UmaConta.nome = "Joao";
-	UmaConta.saldo = 100;
+	UmaConta.definirNomeTitular("Joao");
 
 	Conta OutraConta;
-	OutraConta.saldo = 200;
 
 	OutraConta.depositar(500);
 	OutraConta.sacar(400);
 
-	cout << "UmaConta: " << UmaConta.saldo << " OutraConta: " << OutraConta.saldo << endl;
+	cout << "UmaConta: " << UmaConta.mostraSaldo() << " OutraConta: " << OutraConta.mostraSaldo() << endl;
+	cout << "nome:" << UmaConta.mostraNome() << endl;
 }
