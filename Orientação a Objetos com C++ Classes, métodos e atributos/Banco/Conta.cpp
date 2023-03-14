@@ -1,9 +1,16 @@
 #include <iostream>
 #include "Conta.hpp"
 
+int Conta::numeroContas = 0;
+
+int Conta::mostraNumeroConta() {
+	return numeroContas;
+}
+
 Conta::Conta(std::string numero, std::string cpf, std::string nome) :
 	numero(numero), cpf(cpf), nome(nome), saldo(0)
 {
+	numeroContas++;
 }
 
 std::string Conta::mostraNumero() const {

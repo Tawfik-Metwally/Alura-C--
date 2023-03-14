@@ -2,6 +2,11 @@
 #include <string>
 
 class Conta {
+private:
+	static int numeroContas;
+public:
+	static int mostraNumeroConta();
+private:
 	std::string numero;
 	std::string cpf;
 	std::string nome;

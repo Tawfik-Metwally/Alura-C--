@@ -9,11 +9,12 @@ void ExibeSaldo(const Conta& conta) {
 
 int main() {
 	Conta UmaConta("123456", "123.456.789-10", "Paulo");
-	//UmaConta.definirNomeTitular("Joao");
+	Conta OutraConta("123566", "123.376.789-10", "Joao");
+	Conta UmaOutraConta("123566", "123.376.789-10", "Pedro");
 
 	UmaConta.depositar(500);
 	UmaConta.sacar(400);
-
 	ExibeSaldo(UmaConta);
-	cout << "nome:" << UmaConta.mostraCpf() << endl;
+
+	cout << "nome:" << Conta::mostraNumeroConta() << endl;
 }
