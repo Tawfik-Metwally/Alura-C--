@@ -15,5 +15,5 @@ int main() {
 	UmaConta.sacar(400);
 
 	ExibeSaldo(UmaConta);
-	cout << "nome:" << UmaConta.mostraNome() << endl;
+	cout << "nome:" << UmaConta.mostraCpf() << endl;
 }

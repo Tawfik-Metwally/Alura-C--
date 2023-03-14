@@ -9,13 +9,10 @@ class Conta {
 
 public:
 	Conta(std::string numero, std::string cpf, std::string nome);
-	std::string mostraNumero();
-	std::string mostraCpf();
-	std::string mostraNome();
+	std::string mostraNumero() const;
+	std::string mostraCpf() const;
+	std::string mostraNome() const;
 	float mostraSaldo() const;
-	void definirNumeroConta(std::string numeroConta);
-	void definirCpfTitular(std::string cpfTitular);
-	void definirNomeTitular(std::string nomeTitular);
 	void sacar(float valoASacar);
 	void depositar(float valoADepositar);
 };

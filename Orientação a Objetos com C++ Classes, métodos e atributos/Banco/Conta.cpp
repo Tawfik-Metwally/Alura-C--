@@ -6,30 +6,21 @@ Conta::Conta(std::string numero, std::string cpf, std::string nome) :
 {
 }
 
-std::string Conta::mostraCpf() {
+std::string Conta::mostraNumero() const {
+	return numero;
+}
+
+std::string Conta::mostraCpf() const {
 	return cpf;
 }
 
-std::string Conta::mostraNome() {
+std::string Conta::mostraNome() const {
 	return nome;
 }
 
 float Conta::mostraSaldo() const {
 	return saldo;
 }
-
-void Conta::definirNumeroConta(std::string numeroConta) {
-	numero = numeroConta;
-}
-
-void Conta::definirCpfTitular(std::string cpfTitular) {
-	cpf = cpfTitular;
-}
-
-void Conta::definirNomeTitular(std::string nomeTitular) {
-	nome = nomeTitular;
-}
-
 
 void Conta::sacar(float valoASacar) {
 	if (valoASacar < 0) {
