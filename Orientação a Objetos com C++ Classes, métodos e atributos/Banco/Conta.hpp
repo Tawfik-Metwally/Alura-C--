@@ -4,8 +4,10 @@
 class Conta {
 private:
 	static int numeroContas;
+
 public:
 	static int mostraNumeroConta();
+
 private:
 	std::string numero;
 	std::string cpf;
@@ -21,4 +23,7 @@ public:
 	float mostraSaldo() const;
 	void sacar(float valoASacar);
 	void depositar(float valoADepositar);
+
+private:
+	void verificaNome();
 };

@@ -10,6 +10,7 @@ int Conta::mostraNumeroConta() {
 Conta::Conta(std::string numero, std::string cpf, std::string nome) :
 	numero(numero), cpf(cpf), nome(nome), saldo(0)
 {
+	verificaNome();
 	numeroContas++;
 }
 
@@ -51,4 +52,11 @@ void Conta::depositar(float valoADepositar) {
 		return;
 	}
 	saldo += valoADepositar;
+}
+
+void Conta::verificaNome() {
+	if (nome.size() < 5) {
+		std::cout << "Nome muito curto" << std::endl;
+		exit(1);
+	}
 }
