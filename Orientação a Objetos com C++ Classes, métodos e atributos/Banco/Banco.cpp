@@ -8,15 +8,12 @@ void ExibeSaldo(const Conta& conta) {
 }
 
 int main() {
-	Conta UmaConta;
-	UmaConta.definirNomeTitular("Joao");
+	Conta UmaConta("123456", "123.456.789-10", "Paulo");
+	//UmaConta.definirNomeTitular("Joao");
 
-	Conta OutraConta;
+	UmaConta.depositar(500);
+	UmaConta.sacar(400);
 
-	OutraConta.depositar(500);
-	OutraConta.sacar(400);
-
-	ExibeSaldo(OutraConta);
 	ExibeSaldo(UmaConta);
 	cout << "nome:" << UmaConta.mostraNome() << endl;
 }

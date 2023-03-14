@@ -8,6 +8,7 @@ class Conta {
 	float saldo = 0;
 
 public:
+	Conta(std::string numero, std::string cpf, std::string nome);
 	std::string mostraNumero();
 	std::string mostraCpf();
 	std::string mostraNome();
@@ -17,5 +18,4 @@ public:
 	void definirNomeTitular(std::string nomeTitular);
 	void sacar(float valoASacar);
 	void depositar(float valoADepositar);
-
 };
