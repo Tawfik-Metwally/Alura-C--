@@ -14,6 +14,7 @@ private:
 
 public:
 	Conta(std::string numero, std::string cpf, std::string nome);
+	~Conta();
 	std::string mostraNumero() const;
 	std::string mostraCpf() const;
 	std::string mostraNome() const;

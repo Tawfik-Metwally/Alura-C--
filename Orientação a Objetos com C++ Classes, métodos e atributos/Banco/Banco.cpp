@@ -4,6 +4,7 @@
 using namespace std;
 
 void ExibeSaldo(const Conta& conta) {
+	Conta UmaOutraConta("123566", "123.376.789-10", "Felipe");
 	cout << "Seu Saldo eh: " << conta.mostraSaldo() << endl;
 }
 

@@ -13,6 +13,10 @@ Conta::Conta(std::string numero, std::string cpf, std::string nome) :
 	numeroContas++;
 }
 
+Conta::~Conta() {
+	numeroContas--;
+}
+
 std::string Conta::mostraNumero() const {
 	return numero;
 }
