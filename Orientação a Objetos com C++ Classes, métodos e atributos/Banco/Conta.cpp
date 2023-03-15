@@ -8,7 +8,7 @@ int Conta::mostraNumeroConta() {
 }
 
 Conta::Conta(std::string numero, Titular titular) :
-	numero(numero), saldo(0)
+	numero(numero), titular(titular), saldo(0)
 {
 	numeroContas++;
 }

@@ -10,8 +10,9 @@ public:
 	static int mostraNumeroConta();
 
 private:
+	Titular titular;
 	std::string numero;
-	float saldo = 0;
+	float saldo;
 
 public:
 	Conta(std::string numero, Titular titular);
@@ -20,7 +21,4 @@ public:
 	float mostraSaldo() const;
 	void sacar(float valoASacar);
 	void depositar(float valoADepositar);
-
-private:
-	void verificaNome();
 };
