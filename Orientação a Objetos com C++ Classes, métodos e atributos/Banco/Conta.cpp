@@ -7,10 +7,9 @@ int Conta::mostraNumeroConta() {
 	return numeroContas;
 }
 
-Conta::Conta(std::string numero, std::string cpf, std::string nome) :
-	numero(numero), cpf(cpf), nome(nome), saldo(0)
+Conta::Conta(std::string numero, Titular titular) :
+	numero(numero), saldo(0)
 {
-	verificaNome();
 	numeroContas++;
 }
 
@@ -20,14 +19,6 @@ Conta::~Conta() {
 
 std::string Conta::mostraNumero() const {
 	return numero;
-}
-
-std::string Conta::mostraCpf() const {
-	return cpf;
-}
-
-std::string Conta::mostraNome() const {
-	return nome;
 }
 
 float Conta::mostraSaldo() const {
@@ -52,11 +43,4 @@ void Conta::depositar(float valoADepositar) {
 		return;
 	}
 	saldo += valoADepositar;
-}
-
-void Conta::verificaNome() {
-	if (nome.size() < 5) {
-		std::cout << "Nome muito curto" << std::endl;
-		exit(1);
-	}
 }
